@@ -52,8 +52,10 @@ jobs:
           git add .gitignore
 
           # NTFS-mounted source marked almost every file executable. Keep only real shell launchers executable.
-          while IFS= read -r path; do
-            [ -z "$path" ] && continue
+          while IFS= read -r -d '' entry; do
+            mode="${entry%% *}"
+            [ "$mode" = "100755" ] || continue
+            path="${entry#*$'\t'}"
             case "$path" in
               gradlew|*.sh)
                 ;;
@@ -61,7 +63,7 @@ jobs:
                 git update-index --chmod=-x -- "$path"
                 ;;
             esac
-          done < <(git ls-files -s | awk '$1 == "100755" {print $4}')
+          done < <(git ls-files -s -z)
 
           if ! git diff --cached --quiet; then
             git config user.name "github-actions[bot]"
