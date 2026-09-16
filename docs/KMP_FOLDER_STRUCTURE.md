@@ -1,11 +1,12 @@
-# Tamnni Care — KMP Folder Structure
+# Tamnni Care — Current KMP Folder Structure
+
+This file documents the **repository as it exists today**. It replaces the older proposed `shared/ + androidApp/` layout, because Tamnni Care currently uses a single `composeApp` Kotlin Multiplatform module with shared Compose UI.
 
 ## Project Root
 
 ```text
 TamnniCare/
-├── shared/
-├── androidApp/
+├── composeApp/
 ├── iosApp/
 ├── docs/
 ├── assets/
@@ -13,126 +14,101 @@ TamnniCare/
 ├── gradle/
 ├── build.gradle.kts
 ├── settings.gradle.kts
+├── gradle.properties
 └── README.md
 ```
 
 ## Root Folder Purpose
 
-### shared/
+### `composeApp/`
 
-Shared Kotlin Multiplatform code:
-
-- business logic
-- domain models
-- repositories
-- use cases
-
-### androidApp/
-
-Android-specific code:
-
-- Jetpack Compose UI
-- Android navigation
-- Android resources
-- Notifications
-
-### iosApp/
-
-iOS-specific code:
-
-- SwiftUI screens
-- iOS navigation
-- Notifications
-
-### docs/
-
-PRD, architecture, sitemap, user flows
-
-### assets/
-
-Brand assets, icons, screenshots, store assets, audios
-
-### reference/
-
-## Shared Module Structure
+Main Kotlin Multiplatform application module.
 
 ```text
-shared/
-└── src/
-    ├── commonMain/
-    │   └── kotlin/
-    │       └── com/
-    │           └── tamnnilabs/
-    │               └── care/
-    │                   ├── core/
-    │                   ├── data/
-    │                   ├── domain/
-    │                   ├── features/
-    │                   └── platform/
-    ├── androidMain/
-    ├── iosMain/
-    └── commonTest/
+composeApp/src/
+├── commonMain/      # Shared Compose UI, navigation, state, resources
+├── commonTest/      # Shared tests
+├── androidMain/     # Android entry point and Android-specific integration
+└── iosMain/         # iOS bridge and iOS-specific integration
 ```
 
-## Suggested Shared Packages
+The module currently owns both the shared application UI and most prototype state/business rules.
 
-### core/
+### `iosApp/`
 
-- error/
-- util/
-- model/
-- constants/
-- extensions/
+Native iOS host project used to launch the shared Compose application through Xcode.
 
-### domain/
+### `docs/`
 
-- model/
-- repository/
-- usecase/
+Product and engineering documentation, including:
 
-### data/
+- PRD
+- architecture
+- user flows
+- design-system documentation
+- supporting product notes
 
-- remote/
-- local/
-- mapper/
-- repository/
+### `assets/`
 
-### features/
+Project-owned branding, icons, palettes, and export assets.
 
-- auth/
-- senior/
-- caregiver/
-- checkin/
-- medication/
-- alerts/
-- family/
+### `reference/`
 
-## Android UI Screen Structure
+Textual prompts/product reference material retained for development context. Third-party/private visual inspiration is intentionally excluded from the public repository.
+
+### `gradle/`
+
+Gradle wrapper/version-catalog support.
+
+## Shared Kotlin Organization
+
+The current shared source tree is lightweight and product-oriented rather than deeply layered:
 
 ```text
-androidApp/ui/screens/
-├── onboarding/
-├── auth/
-├── senior/
-├── caregiver/
-├── medication/
-├── alerts/
-└── profile/
+composeApp/src/commonMain/kotlin/
+├── com/tamnnilabs/care/    # Application entry/shared app wiring
+└── ui/
+    ├── components/          # Reusable Compose components
+    ├── i18n/                # Language/resource helpers
+    ├── navigation/          # Navigation graph and routes
+    ├── screens/             # Product screens
+    ├── state/               # State holders, prototype stores/providers
+    └── theme/               # Shared visual theme
 ```
 
-## Package Name
+As production repositories/use cases are added later, non-UI logic can be separated into clearer `core`, `data`, `domain`, and `features` packages. That refactor is intentionally deferred until the additional complexity is justified.
+
+## Package / Application ID
 
 ```text
 com.tamnnilabs.care
 ```
 
-## Build Order
+## Build Targets
 
-1. shared/domain
-2. shared/core
-3. shared/data
-4. androidApp/ui/theme
-5. androidApp/ui/navigation
-6. androidApp/ui/screens
-7. notifications
-8. iosApp after shared logic stabilizes
+### Android
+
+```bash
+./gradlew :composeApp:assembleDebug
+```
+
+### Shared/Android tests
+
+```bash
+./gradlew :composeApp:testDebugUnitTest
+```
+
+### iOS
+
+Open `iosApp/iosApp.xcodeproj` on macOS with Xcode. The Kotlin module exports the shared Compose app to the native host.
+
+## Recommended Growth Order
+
+1. Keep the current repository baseline buildable and documented.
+2. Complete real product behavior behind existing UI flows.
+3. Introduce repository/domain abstractions when remote/local production data exists.
+4. Add notifications, authentication and family linking.
+5. Expand automated tests and validate iOS on macOS/Xcode.
+6. Add release media, store assets and production release pipelines.
+
+See [`../ROADMAP.md`](../ROADMAP.md) for the detailed staged plan.
