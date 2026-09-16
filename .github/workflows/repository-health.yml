@@ -1,0 +1,62 @@
+name: Repository Health
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Reject generated, local, signing, or private reference files
+        shell: bash
+        run: |
+          set -euo pipefail
+          forbidden="$(git ls-files | grep -E '(^|/)(\.gradle|\.kotlin|build|DerivedData|Pods|Gemini_Design_Pack)(/|$)|(^|/)local\.properties$|(^|/)\.env($|\.)|\.keystore$|\.jks$|\.p12$|\.pfx$|(^|/)google-services\.json$|(^|/)GoogleService-Info\.plist$|(^|/)Secrets\.xcconfig$' || true)"
+          if [ -n "$forbidden" ]; then
+            echo "Forbidden tracked files detected:"
+            echo "$forbidden"
+            exit 1
+          fi
+
+      - name: Scan tracked text for common secret patterns
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import re
+          import subprocess
+          from pathlib import Path
+
+          patterns = {
+              'Google API key': re.compile(r'AIza[0-9A-Za-z_-]{30,}'),
+              'GitHub token': re.compile(r'gh[pousr]_[A-Za-z0-9_]{20,}'),
+              'OpenAI-style secret': re.compile(r'sk-[A-Za-z0-9_-]{20,}'),
+              'Private key block': re.compile(r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----'),
+          }
+
+          findings = []
+          tracked = subprocess.check_output(['git', 'ls-files', '-z']).split(b'\0')
+          for raw in tracked:
+              if not raw:
+                  continue
+              path = Path(raw.decode('utf-8', errors='surrogateescape'))
+              try:
+                  text = path.read_text(encoding='utf-8')
+              except (UnicodeDecodeError, OSError):
+                  continue
+              for label, pattern in patterns.items():
+                  if pattern.search(text):
+                      findings.append(f'{label}: {path}')
+
+          if findings:
+              raise SystemExit('Potential committed secrets detected:\n' + '\n'.join(findings))
+          print('Repository hygiene and common-secret checks passed.')
+          PY
