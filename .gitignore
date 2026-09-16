@@ -1,21 +1,52 @@
-*.iml
-.kotlin
-.gradle
+# Gradle / Kotlin
+.gradle/
+.kotlin/
 **/build/
-xcuserdata
 !src/**/build/
+*.iml
+
+# IDEs
+.idea/
+.vscode/
+
+# Android local / native output
 local.properties
-.idea
-.DS_Store
-captures
-.externalNativeBuild
-.cxx
+captures/
+.externalNativeBuild/
+.cxx/
+
+# iOS / Xcode user data
+xcuserdata/
+*.xcuserstate
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata/
 !*.xcodeproj/project.xcworkspace/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
+Pods/
+DerivedData/
+
+# Secrets and signing material
+.env
+.env.*
+*.keystore
+*.jks
+*.p12
+*.pfx
+google-services.json
+GoogleService-Info.plist
+Secrets.xcconfig
+
+# JavaScript tooling, if introduced
 node_modules/
+
+# OS noise
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Private / third-party visual reference material
+anwar/Gemini_Design_Pack/
 reference/ui_inspiration/
 reference/app_examples/
