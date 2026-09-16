@@ -1,0 +1,317 @@
+<resources>
+    <string name="ar_app_name">طمّني</string>
+    <string name="en_app_name">Tamnni Care</string>
+    <string name="ar_splash_subtitle">عائلتك، دائمًا بقربك</string>
+    <string name="en_splash_subtitle">Your family, always close</string>
+
+    <string name="ar_next">التالي</string>
+    <string name="en_next">Next</string>
+    <string name="ar_skip">تخطي</string>
+    <string name="en_skip">Skip</string>
+    <string name="ar_get_started">ابدأ الآن</string>
+    <string name="en_get_started">Get Started</string>
+
+    <string name="ar_onboarding_highlight_1">طمأنة سريعة</string>
+    <string name="en_onboarding_highlight_1">Quick reassurance</string>
+    <string name="ar_onboarding_highlight_2">روتين مريح</string>
+    <string name="en_onboarding_highlight_2">Gentle routine</string>
+    <string name="ar_onboarding_highlight_3">قرب دائم</string>
+    <string name="en_onboarding_highlight_3">Always connected</string>
+
+    <string name="ar_onboarding_title_1">اطمئنان يومي بضغطة زر</string>
+    <string name="en_onboarding_title_1">Daily reassurance in one tap</string>
+    <string name="ar_onboarding_subtitle_1">طمئن عائلتك بسرعة وبدون تعقيد.</string>
+    <string name="en_onboarding_subtitle_1">Reassure your family quickly and simply.</string>
+    <string name="ar_onboarding_title_2">متابعة لطيفة للأدوية</string>
+    <string name="en_onboarding_title_2">Gentle medication follow-up</string>
+    <string name="ar_onboarding_subtitle_2">عرض واضح للجرعة القادمة بحالة سهلة الفهم.</string>
+    <string name="en_onboarding_subtitle_2">Clear next-dose preview with easy status.</string>
+    <string name="ar_onboarding_title_3">عائلتك دائمًا معك</string>
+    <string name="en_onboarding_title_3">Your family stays close</string>
+    <string name="ar_onboarding_subtitle_3">تنبيهات هادئة عند الحاجة فقط.</string>
+    <string name="en_onboarding_subtitle_3">Calm alerts only when needed.</string>
+    <string name="ar_onboarding_tagline">راحة يومية لك ولعائلتك</string>
+    <string name="en_onboarding_tagline">Daily peace for you and your family</string>
+
+    <string name="ar_role_title">اختر طريقة الاستخدام</string>
+    <string name="en_role_title">Choose your experience</string>
+    <string name="ar_role_subtitle">سنضبط التجربة بما يناسبك من البداية.</string>
+    <string name="en_role_subtitle">We will tailor the experience from the start.</string>
+    <string name="ar_role_senior_title">كبير السن</string>
+    <string name="en_role_senior_title">Senior</string>
+    <string name="ar_role_senior_desc">واجهة بسيطة للاطمئنان اليومي وتذكير الدواء.</string>
+    <string name="en_role_senior_desc">Simple view for daily reassurance and medication reminders.</string>
+    <string name="ar_role_caregiver_title">مقدم رعاية / أحد أفراد العائلة</string>
+    <string name="en_role_caregiver_title">Caregiver / Family member</string>
+    <string name="ar_role_caregiver_desc">ملخص هادئ للحالة والتنبيهات المهمة.</string>
+    <string name="en_role_caregiver_desc">Calm summary of status and important alerts.</string>
+    <string name="ar_role_selected">الوضع المحدد</string>
+    <string name="en_role_selected">Selected mode</string>
+
+    <string name="ar_morning_greeting_prefix">صباح الخير يا</string>
+    <string name="en_morning_greeting_prefix">Good morning,</string>
+    <string name="ar_hello_prefix">مرحبًا يا</string>
+    <string name="en_hello_prefix">Hello,</string>
+    <string name="ar_tracking_prefix">متابعة:</string>
+    <string name="en_tracking_prefix">Tracking:</string>
+
+    <string name="ar_today_status">حالة اليوم</string>
+    <string name="en_today_status">Today's status</string>
+    <string name="ar_reassured_today">تم الاطمئنان اليوم</string>
+    <string name="en_reassured_today">Reassurance received today</string>
+    <string name="ar_not_reassured_today">لم يصل الاطمئنان اليوم بعد</string>
+    <string name="en_not_reassured_today">No reassurance yet today</string>
+    <string name="ar_reassure_success">تم إرسال الاطمئنان بنجاح</string>
+    <string name="en_reassure_success">Reassurance sent successfully</string>
+    <string name="ar_reassure_hint">اضغط \"أنا بخير\" ليصلهم الاطمئنان</string>
+    <string name="en_reassure_hint">Tap \"I'm okay\" to reassure your family</string>
+    <string name="ar_im_okay">أنا بخير</string>
+    <string name="en_im_okay">I'm okay</string>
+    <string name="ar_last_update_prefix">آخر تحديث:</string>
+    <string name="en_last_update_prefix">Last update:</string>
+
+    <string name="ar_medication_section_title">متابعة الدواء</string>
+    <string name="en_medication_section_title">Medication follow-up</string>
+    <string name="ar_medication_section_subtitle">لمحة سريعة بدون تعقيد</string>
+    <string name="en_medication_section_subtitle">Quick view without complexity</string>
+    <string name="ar_next_dose">الجرعة القادمة</string>
+    <string name="en_next_dose">Next dose</string>
+    <string name="ar_status_taken">تم أخذه</string>
+    <string name="en_status_taken">Taken</string>
+    <string name="ar_status_upcoming">قادم</string>
+    <string name="en_status_upcoming">Upcoming</string>
+    <string name="ar_medication_updated">تم التحديث</string>
+    <string name="en_medication_updated">Updated</string>
+    <string name="ar_medication_waiting">بانتظار التأكيد</string>
+    <string name="en_medication_waiting">Awaiting confirmation</string>
+
+    <string name="ar_help_title">المساعدة</string>
+    <string name="en_help_title">Help</string>
+    <string name="ar_help_subtitle">تظل ثانوية ومخصصة للحاجة الفعلية</string>
+    <string name="en_help_subtitle">Secondary and isolated for real need</string>
+    <string name="ar_help_idle_text">إذا احتجت مساعدة، يمكنك إرسال طلب الآن.</string>
+    <string name="en_help_idle_text">If you need help, you can send a request now.</string>
+    <string name="ar_help_requested_text">تم تسجيل طلبك، وسنقوم بإشعار من يهتم بك عند التفعيل.</string>
+    <string name="en_help_requested_text">Your request is recorded and your family will be notified when enabled.</string>
+    <string name="ar_help_request">طلب مساعدة</string>
+    <string name="en_help_request">Request help</string>
+    <string name="ar_help_requested">تم طلب المساعدة</string>
+    <string name="en_help_requested">Help requested</string>
+    <string name="ar_help_reset">إلغاء الطلب</string>
+    <string name="en_help_reset">Cancel request</string>
+
+    <string name="ar_alerts_title">التنبيهات</string>
+    <string name="en_alerts_title">Alerts</string>
+    <string name="ar_alerts_subtitle">تحديث هادئ حسب آخر حالة</string>
+    <string name="en_alerts_subtitle">Calm update based on latest status</string>
+    <string name="ar_summary_today">ملخص اليوم</string>
+    <string name="en_summary_today">Today summary</string>
+    <string name="ar_view_details">عرض التفاصيل</string>
+    <string name="en_view_details">View details</string>
+    <string name="ar_actions_quick">إجراءات سريعة</string>
+    <string name="en_actions_quick">Quick actions</string>
+    <string name="ar_actions_subtitle">متابعة فورية عند الحاجة</string>
+    <string name="en_actions_subtitle">Fast follow-up when needed</string>
+    <string name="ar_call">اتصال</string>
+    <string name="en_call">Call</string>
+    <string name="ar_message">رسالة</string>
+    <string name="en_message">Message</string>
+
+    <string name="ar_nav_home">الرئيسية</string>
+    <string name="en_nav_home">Home</string>
+    <string name="ar_nav_alerts">التنبيهات</string>
+    <string name="en_nav_alerts">Alerts</string>
+    <string name="ar_nav_profile">حسابي</string>
+    <string name="en_nav_profile">Profile</string>
+
+    <string name="ar_settings_title">الإعدادات</string>
+    <string name="en_settings_title">Settings</string>
+    <string name="ar_settings_language">اللغة</string>
+    <string name="en_settings_language">Language</string>
+    <string name="ar_settings_appearance">المظهر</string>
+    <string name="en_settings_appearance">Appearance</string>
+    <string name="ar_settings_system">تلقائي (حسب الجهاز)</string>
+    <string name="en_settings_system">System default</string>
+    <string name="ar_settings_light">فاتح</string>
+    <string name="en_settings_light">Light</string>
+    <string name="ar_settings_dark">داكن</string>
+    <string name="en_settings_dark">Dark</string>
+    <string name="ar_settings_arabic">العربية</string>
+    <string name="en_settings_arabic">Arabic</string>
+    <string name="ar_settings_english">English</string>
+    <string name="en_settings_english">English</string>
+
+    <string name="ar_page_profile">الملف الشخصي</string>
+    <string name="en_page_profile">Profile</string>
+    <string name="ar_page_history">سجل الاطمئنان</string>
+    <string name="en_page_history">Reassurance history</string>
+    <string name="ar_page_medications">الأدوية</string>
+    <string name="en_page_medications">Medications</string>
+    <string name="ar_page_about">عن التطبيق</string>
+    <string name="en_page_about">About app</string>
+
+    <string name="ar_settings_open_profile">الملف الشخصي</string>
+    <string name="en_settings_open_profile">Profile</string>
+    <string name="ar_settings_open_history">سجل الاطمئنان</string>
+    <string name="en_settings_open_history">Reassurance history</string>
+    <string name="ar_settings_open_alerts">قائمة التنبيهات</string>
+    <string name="en_settings_open_alerts">Alerts list</string>
+    <string name="ar_settings_open_medications">نظرة الأدوية</string>
+    <string name="en_settings_open_medications">Medication overview</string>
+    <string name="ar_settings_open_about">عن طمّني</string>
+    <string name="en_settings_open_about">About Tamnni</string>
+    <string name="ar_quick_links_title">روابط سريعة</string>
+    <string name="en_quick_links_title">Quick links</string>
+    <string name="ar_quick_links_subtitle">الوصول السريع للأقسام المساندة</string>
+    <string name="en_quick_links_subtitle">Fast access to supporting sections</string>
+    <string name="ar_settings_links_subtitle">صفحات إضافية للمراجعة والمتابعة</string>
+    <string name="en_settings_links_subtitle">Additional pages for review and follow-up</string>
+    <string name="ar_settings_lang_subtitle">اختيار لغة العرض داخل التطبيق</string>
+    <string name="en_settings_lang_subtitle">Choose app display language</string>
+    <string name="ar_settings_theme_subtitle">تخصيص المظهر بما يناسب راحتك</string>
+    <string name="en_settings_theme_subtitle">Adjust appearance for comfort</string>
+
+    <string name="ar_status_delayed">تأخر الاطمئنان</string>
+    <string name="en_status_delayed">Reassurance delayed</string>
+    <string name="ar_status_follow_up">يحتاج متابعة</string>
+    <string name="en_status_follow_up">Needs follow-up</string>
+    <string name="ar_status_ok_interpretation">الأمور مطمئنة حتى الآن.</string>
+    <string name="en_status_ok_interpretation">Things look reassuring so far.</string>
+    <string name="ar_status_pending_interpretation">قد يفيد تواصل لطيف للاطمئنان.</string>
+    <string name="en_status_pending_interpretation">A gentle follow-up may help.</string>
+    <string name="ar_status_delayed_interpretation">يُفضّل الاطمئنان عليه قريبًا.</string>
+    <string name="en_status_delayed_interpretation">A quick check-in is recommended.</string>
+    <string name="ar_status_followup_interpretation">يُفضّل متابعة الحالة اليوم.</string>
+    <string name="en_status_followup_interpretation">Follow-up is recommended today.</string>
+
+    <string name="ar_alert_none">لا يوجد تنبيه يحتاج متابعة</string>
+    <string name="en_alert_none">No alerts need follow-up</string>
+    <string name="ar_alert_pending">لم يصل الاطمئنان اليوم بعد</string>
+    <string name="en_alert_pending">No reassurance received yet today</string>
+    <string name="ar_alert_delayed">يوجد تأخر في الاطمئنان</string>
+    <string name="en_alert_delayed">There is a reassurance delay</string>
+    <string name="ar_alert_followup">يحتاج متابعة للاطمئنان</string>
+    <string name="en_alert_followup">Needs follow-up reassurance</string>
+
+    <string name="ar_common_back">رجوع</string>
+    <string name="en_common_back">Back</string>
+    <string name="ar_settings_action">الإعدادات</string>
+    <string name="en_settings_action">Settings</string>
+
+    <string name="ar_about_body">طمّني تطبيق اطمئنان عائلي هادئ يركز على راحة البال اليومية لكبار السن وعائلاتهم.</string>
+    <string name="en_about_body">Tamnni is a calm family reassurance app focused on daily peace of mind for seniors and families.</string>
+    <string name="ar_about_supporting">مصمم ليكون واضحًا، لطيفًا، ومطمئنًا في كل زيارة.</string>
+    <string name="en_about_supporting">Designed to stay clear, gentle, and reassuring every time you open it.</string>
+    <string name="ar_empty_history">لا يوجد سجل حتى الآن</string>
+    <string name="en_empty_history">No history yet</string>
+    <string name="ar_history_section_subtitle">ملخص بسيط لحالة الاطمئنان عبر الأيام</string>
+    <string name="en_history_section_subtitle">Simple reassurance summary across recent days</string>
+    <string name="ar_alerts_section_subtitle">تنبيهات واضحة بدون تهويل</string>
+    <string name="en_alerts_section_subtitle">Clear alerts without alarmist tone</string>
+    <string name="ar_profile_role_label">الدور الحالي</string>
+    <string name="en_profile_role_label">Current role</string>
+    <string name="ar_profile_id_label">معرف الحساب</string>
+    <string name="en_profile_id_label">Account ID</string>
+    <string name="ar_profile_trust_note">يمكنك تغيير التفضيلات من الإعدادات في أي وقت.</string>
+    <string name="en_profile_trust_note">You can update preferences from Settings at any time.</string>
+
+    <string name="ar_history_item_today">اليوم - تم الاطمئنان</string>
+    <string name="en_history_item_today">Today - reassurance completed</string>
+    <string name="ar_history_item_yesterday">أمس - تأخر الاطمئنان</string>
+    <string name="en_history_item_yesterday">Yesterday - reassurance delayed</string>
+    <string name="ar_history_item_two_days">قبل يومين - يحتاج متابعة</string>
+    <string name="en_history_item_two_days">Two days ago - needs follow-up</string>
+
+    <string name="ar_alert_item_pending">لم يصل الاطمئنان اليوم بعد</string>
+    <string name="en_alert_item_pending">No reassurance yet today</string>
+    <string name="ar_alert_item_delayed">يوجد تأخر في الاطمئنان</string>
+    <string name="en_alert_item_delayed">There is a reassurance delay</string>
+
+    <string name="ar_med_name_pressure">دواء الضغط</string>
+    <string name="en_med_name_pressure">Blood pressure medication</string>
+    <string name="ar_med_name_vitamin_d">فيتامين د</string>
+    <string name="en_med_name_vitamin_d">Vitamin D</string>
+    <string name="ar_time_morning_9">٩:٠٠ صباحًا</string>
+    <string name="en_time_morning_9">9:00 AM</string>
+    <string name="ar_time_evening_6">٦:٠٠ مساءً</string>
+    <string name="en_time_evening_6">6:00 PM</string>
+    <string name="ar_time_noon_1230">١٢:٣٠ م</string>
+    <string name="en_time_noon_1230">12:30 PM</string>
+
+    <string name="ar_profile_section_identity">هوية الحساب</string>
+    <string name="en_profile_section_identity">Account identity</string>
+    <string name="ar_profile_section_support">الثقة والخصوصية</string>
+    <string name="en_profile_section_support">Trust and privacy</string>
+
+    <string name="ar_history_entry_label">حالة اليوم</string>
+    <string name="en_history_entry_label">Day status</string>
+    <string name="ar_alert_entry_label">مستوى التنبيه</string>
+    <string name="en_alert_entry_label">Alert level</string>
+
+    <string name="ar_about_section_title">فلسفة طمّني</string>
+    <string name="en_about_section_title">Tamnni philosophy</string>
+    <string name="ar_about_section_subtitle">تجربة اطمئنان إنسانية بهدوء وثقة</string>
+    <string name="en_about_section_subtitle">A human reassurance experience with calm confidence</string>
+
+    <string name="ar_settings_section_links">الاختصارات المهمة</string>
+    <string name="en_settings_section_links">Important shortcuts</string>
+
+    <string name="ar_sample_senior_name">أحمد</string>
+    <string name="en_sample_senior_name">Ahmed</string>
+    <string name="ar_sample_caregiver_name">سارة</string>
+    <string name="en_sample_caregiver_name">Sarah</string>
+
+    <string name="ar_quick_links_short_history">السجل</string>
+    <string name="en_quick_links_short_history">History</string>
+    <string name="ar_quick_links_short_meds">الأدوية</string>
+    <string name="en_quick_links_short_meds">Meds</string>
+    <string name="ar_quick_links_short_profile">الملف</string>
+    <string name="en_quick_links_short_profile">Profile</string>
+    <string name="ar_quick_links_short_alerts">التنبيهات</string>
+    <string name="en_quick_links_short_alerts">Alerts</string>
+
+    <string name="ar_chip_attention">يتطلب متابعة</string>
+    <string name="en_chip_attention">Needs follow-up</string>
+    <string name="ar_chip_ok">مطمئن</string>
+    <string name="en_chip_ok">Calm</string>
+
+    <string name="ar_senior_pending_helper">يمكنك الاطمئنان الآن بلمسة واحدة.</string>
+    <string name="en_senior_pending_helper">You can reassure now with one tap.</string>
+    <string name="ar_senior_delayed_helper">يوجد تأخر بسيط، ويفضل تسجيل الاطمئنان الآن.</string>
+    <string name="en_senior_delayed_helper">There is a slight delay, better to check in now.</string>
+    <string name="ar_senior_followup_helper">الحالة تحتاج متابعة أوضح، سجّل الاطمئنان الآن.</string>
+    <string name="en_senior_followup_helper">This state needs closer follow-up, check in now.</string>
+
+    <string name="ar_medication_waiting_compact">بانتظار التأكيد</string>
+    <string name="en_medication_waiting_compact">Waiting for confirm</string>
+    <string name="ar_medication_taken_compact">تمت الجرعة</string>
+    <string name="en_medication_taken_compact">Dose completed</string>
+
+    <string name="ar_alert_item_pending_support">يفضل تواصل لطيف للاطمئنان.</string>
+    <string name="en_alert_item_pending_support">A gentle follow-up is recommended.</string>
+    <string name="ar_alert_item_delayed_support">التأخر مستمر ويحتاج متابعة هادئة.</string>
+    <string name="en_alert_item_delayed_support">Delay is ongoing and needs calm follow-up.</string>
+    <string name="ar_alert_item_time_recent">قبل 10 دقائق</string>
+    <string name="en_alert_item_time_recent">10 minutes ago</string>
+    <string name="ar_alert_item_time_earlier">قبل ساعة</string>
+    <string name="en_alert_item_time_earlier">1 hour ago</string>
+
+    <string name="ar_history_item_today_support">تم تسجيل الاطمئنان بنجاح.</string>
+    <string name="en_history_item_today_support">Reassurance was recorded successfully.</string>
+    <string name="ar_history_item_yesterday_support">حدث تأخر وتمت المتابعة.</string>
+    <string name="en_history_item_yesterday_support">There was a delay and a follow-up happened.</string>
+    <string name="ar_history_item_two_days_support">استمرت الحالة بدون تأكيد.</string>
+    <string name="en_history_item_two_days_support">The state remained without confirmation.</string>
+    <string name="ar_history_item_time_today">اليوم 9:15 ص</string>
+    <string name="en_history_item_time_today">Today 9:15 AM</string>
+    <string name="ar_history_item_time_yesterday">أمس 8:40 م</string>
+    <string name="en_history_item_time_yesterday">Yesterday 8:40 PM</string>
+    <string name="ar_history_item_time_two_days">قبل يومين 11:00 ص</string>
+    <string name="en_history_item_time_two_days">2 days ago 11:00 AM</string>
+
+    <string name="ar_about_values_title">قيم التجربة</string>
+    <string name="en_about_values_title">Experience values</string>
+    <string name="ar_about_values_body">الوضوح، البساطة، والطمأنينة اليومية هي أساس كل شاشة في طمّني.</string>
+    <string name="en_about_values_body">Clarity, simplicity, and daily reassurance guide every Tamnni screen.</string>
+</resources>
+
