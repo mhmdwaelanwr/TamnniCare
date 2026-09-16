@@ -7,13 +7,17 @@
 [![Android CI](https://github.com/mhmdwaelanwr/TamnniCare/actions/workflows/android-ci.yml/badge.svg)](https://github.com/mhmdwaelanwr/TamnniCare/actions/workflows/android-ci.yml)
 [![Repository Health](https://github.com/mhmdwaelanwr/TamnniCare/actions/workflows/repository-health.yml/badge.svg)](https://github.com/mhmdwaelanwr/TamnniCare/actions/workflows/repository-health.yml)
 
-Tamnni Care (طمّني) is a Kotlin Multiplatform mobile prototype for elderly reassurance and family care coordination. It focuses on simple daily check-ins, medication reminders, missed-check-in alerts, and a calm senior-friendly experience shared across Android and iOS.
+Tamnni Care (طمّني) is a Kotlin Multiplatform mobile prototype for elderly reassurance and family care coordination. It focuses on simple daily check-ins, medication follow-up, calm missed-check-in alerts, and a senior-friendly experience shared across Android and iOS.
 
 ## Project Status
 
-**Active prototype / MVP foundation.** The repository currently contains the shared Compose Multiplatform UI, Android and iOS entry points, navigation, onboarding and role flows, senior/caregiver home experiences, medication and alert screens, local UI state, design-system assets, and common tests.
+**Clean public baseline / active MVP prototype.** The repository is intentionally at the stage where it is safe, buildable, documented, and easy to return to for deeper development later.
 
-This project is not a medical device, emergency service, or substitute for professional medical advice or emergency care. Prototype help and alert flows should not be treated as live emergency integrations unless explicitly connected to a production service.
+The current codebase contains shared Compose Multiplatform UI, Android and iOS targets, navigation, onboarding and role flows, senior/caregiver home experiences, supporting medication/alert/history/profile screens, local reassurance state, design-system assets, and common tests.
+
+Some product flows still use sample/in-memory data. Help requests and caregiver quick actions are prototype hooks, not live emergency/family integrations.
+
+This project is not a medical device, emergency service, or substitute for professional medical advice or emergency care.
 
 ## MVP Goals
 
@@ -83,11 +87,16 @@ CI performs an Android compile/test validation on pushes and pull requests to `m
 
 ## Documentation
 
+- [Roadmap](ROADMAP.md)
 - [Product Requirements](docs/PRD.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [User Flows](docs/USER_FLOWS.md)
-- [KMP Folder Structure](docs/KMP_FOLDER_STRUCTURE.md)
+- [Current KMP Folder Structure](docs/KMP_FOLDER_STRUCTURE.md)
 - [Design Tokens](docs/design_system/DESIGN_TOKENS.md)
+
+## Development Approach
+
+`main` is kept as the clean baseline. Deeper work can happen later in focused branches/PRs without turning unfinished plans into claims about the current product. The staged plan is documented in [`ROADMAP.md`](ROADMAP.md).
 
 ## Public Repository Hygiene
 
