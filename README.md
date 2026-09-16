@@ -4,6 +4,9 @@
 
 # Tamnni Care
 
+[![Android CI](https://github.com/mhmdwaelanwr/TamnniCare/actions/workflows/android-ci.yml/badge.svg)](https://github.com/mhmdwaelanwr/TamnniCare/actions/workflows/android-ci.yml)
+[![Repository Health](https://github.com/mhmdwaelanwr/TamnniCare/actions/workflows/repository-health.yml/badge.svg)](https://github.com/mhmdwaelanwr/TamnniCare/actions/workflows/repository-health.yml)
+
 Tamnni Care (طمّني) is a Kotlin Multiplatform mobile prototype for elderly reassurance and family care coordination. It focuses on simple daily check-ins, medication reminders, missed-check-in alerts, and a calm senior-friendly experience shared across Android and iOS.
 
 ## Project Status
@@ -52,7 +55,7 @@ TamnniCare/
 
 ## Build Android
 
-Requirements: JDK 11+ and an Android SDK compatible with compile/target SDK 35.
+Requirements: JDK 17 and an Android SDK compatible with compile/target SDK 35.
 
 ```bash
 ./gradlew :composeApp:assembleDebug
@@ -76,7 +79,7 @@ Shared state and policy tests live under `composeApp/src/commonTest`.
 ./gradlew :composeApp:testDebugUnitTest
 ```
 
-CI performs an Android compile/test validation on pushes and pull requests to `main`.
+CI performs an Android compile/test validation on pushes and pull requests to `main`, while the repository-health workflow checks for generated/private files and common committed-secret patterns.
 
 ## Documentation
 
