@@ -93,6 +93,8 @@ CI performs an Android compile/test validation on pushes and pull requests to `m
 - [User Flows](docs/USER_FLOWS.md)
 - [Current KMP Folder Structure](docs/KMP_FOLDER_STRUCTURE.md)
 - [Design Tokens](docs/design_system/DESIGN_TOKENS.md)
+- [Contributing](CONTRIBUTING.md)
+- [Security](SECURITY.md)
 
 ## Development Approach
 
