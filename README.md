@@ -1,35 +1,95 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
+<p align="center">
+  <img src="assets/branding/exports/logo/primary-logo-transparent.png" alt="Tamnni Care" width="420" />
+</p>
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-    folder is the appropriate location.
+# Tamnni Care
 
-* [/iosApp](./iosApp/iosApp) contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+Tamnni Care (طمّني) is a Kotlin Multiplatform mobile prototype for elderly reassurance and family care coordination. It focuses on simple daily check-ins, medication reminders, missed-check-in alerts, and a calm senior-friendly experience shared across Android and iOS.
 
-### Build and Run Android Application
+## Project Status
 
-To build and run the development version of the Android app, use the run configuration from the run widget
-in your IDE’s toolbar or build it directly from the terminal:
-- on macOS/Linux
-  ```shell
-  ./gradlew :composeApp:assembleDebug
-  ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:assembleDebug
-  ```
+**Active prototype / MVP foundation.** The repository currently contains the shared Compose Multiplatform UI, Android and iOS entry points, navigation, onboarding and role flows, senior/caregiver home experiences, medication and alert screens, local UI state, design-system assets, and common tests.
 
-### Build and Run iOS Application
+This project is not a medical device, emergency service, or substitute for professional medical advice or emergency care. Prototype help and alert flows should not be treated as live emergency integrations unless explicitly connected to a production service.
 
-To build and run the development version of the iOS app, use the run configuration from the run widget
-in your IDE’s toolbar or open the [/iosApp](./iosApp) directory in Xcode and run it from there.
+## MVP Goals
 
----
+- One-tap daily reassurance for senior users.
+- Medication reminders and confirmation flows.
+- Missed check-in alerts for caregivers/family.
+- A simple help flow with large, accessible UI.
+- Shared product experience across Android and iOS.
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+The V1 product scope intentionally excludes live location tracking, video calls, wearable/device sync, doctor consultations, advanced AI, and payments.
+
+## Tech Stack
+
+- Kotlin Multiplatform
+- Compose Multiplatform
+- Material 3
+- Android + iOS targets
+- Navigation Compose
+- Multiplatform Settings
+- kotlinx-datetime
+- Gradle version catalogs
+
+## Project Structure
+
+```text
+TamnniCare/
+├── composeApp/
+│   └── src/
+│       ├── commonMain/      # Shared UI, navigation, state and resources
+│       ├── commonTest/      # Shared tests
+│       ├── androidMain/     # Android entry point/platform code
+│       └── iosMain/         # iOS bridge/platform code
+├── iosApp/                  # Native iOS application shell
+├── docs/                    # PRD, architecture, flows and design system
+├── assets/branding/         # Tamnni Care branding assets
+├── reference/               # Product notes/prompts; visual references excluded
+└── gradle/                  # Version catalog and wrapper configuration
+```
+
+## Build Android
+
+Requirements: JDK 11+ and an Android SDK compatible with compile/target SDK 35.
+
+```bash
+./gradlew :composeApp:assembleDebug
+```
+
+On Windows:
+
+```powershell
+.\gradlew.bat :composeApp:assembleDebug
+```
+
+## Run iOS
+
+Open `iosApp/iosApp.xcodeproj` in Xcode on macOS and run the iOS application target. The shared Kotlin framework is configured from the `composeApp` module.
+
+## Tests
+
+Shared state and policy tests live under `composeApp/src/commonTest`.
+
+```bash
+./gradlew :composeApp:testDebugUnitTest
+```
+
+CI performs an Android compile/test validation on pushes and pull requests to `main`.
+
+## Documentation
+
+- [Product Requirements](docs/PRD.md)
+- [Architecture](docs/ARCHITECTURE.md)
+- [User Flows](docs/USER_FLOWS.md)
+- [KMP Folder Structure](docs/KMP_FOLDER_STRUCTURE.md)
+- [Design Tokens](docs/design_system/DESIGN_TOKENS.md)
+
+## Public Repository Hygiene
+
+Generated Gradle/Kotlin output, IDE metadata, signing files, local environment files, service configuration files, and private/third-party visual reference material are intentionally excluded from version control.
+
+## License
+
+Original Tamnni Care project-specific source code and original project materials are copyright © 2026 Mohamed Anwar. All rights reserved unless explicitly stated otherwise. Third-party dependencies and assets remain governed by their respective licenses.
